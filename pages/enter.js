@@ -1,9 +1,10 @@
 import { auth, googleAuthProvider } from '../libs/firebase';
 import { signInWithPopup, signInAnonymously, signOut } from 'firebase/auth';
+import { useContext } from 'react';
+import { UserContext } from '../libs/context';
 
 export default function Enter(props) {
-	const user = null;
-	const username = null;
+	const { user, username } = useContext(UserContext);
 
 	return (
 		<main>
